@@ -6,7 +6,7 @@ LABEL "com.github.actions.icon"="refresh-cw"
 LABEL "com.github.actions.color"="green"
 
 LABEL version="0.1.0"
-LABEL repository="https://github.com/ShuklaShubh89/frontendaction"
+LABEL repository="https://github.com/ShuklaShubh89/cdkinfra-action"
 LABEL homepage="https://info.shubhamshukla-resume.com/"
 LABEL maintainer="Shubham Shukla <shubham.cored@gmail.com>"
 
