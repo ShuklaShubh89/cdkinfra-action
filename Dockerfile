@@ -1,5 +1,6 @@
 FROM node:latest
 
+ENV INPUT_CDK_VERSION: latest
 LABEL "com.github.actions.name"="CDK app Github Actions"
 LABEL "com.github.actions.description"="Build test and deploy the cdk infrastructure"
 LABEL "com.github.actions.icon"="refresh-cw"
@@ -13,6 +14,8 @@ LABEL maintainer="Shubham Shukla <shubham.cored@gmail.com>"
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 RUN unzip awscliv2.zip
 RUN ./aws/install
+RUN npm install typescript -g
+RUN npm install -g aws-cdk@"${INPUT_CDK_VERSION}"
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
