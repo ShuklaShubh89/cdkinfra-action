@@ -32,6 +32,8 @@ aws configure set default.region "${AWS_DEFAULT_REGION}"
 echo "cdk version:"
 cdk --version
 
+npm install
+
 npm run build
 
 npm run test
