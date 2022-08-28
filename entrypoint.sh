@@ -29,15 +29,23 @@ aws configure set aws_access_key_id "${AWS_ACCESS_KEY_ID}"
 aws configure set aws_secret_access_key "${AWS_SECRET_ACCESS_KEY}"
 aws configure set default.region "${AWS_DEFAULT_REGION}"
 
+## Install AWS CDK
+#[[ -z "${INPUT_CDK_VERSION}" ]] && npm install -g aws-cdk || npm install -g aws-cdk@"${INPUT_CDK_VERSION}"
+
 echo "cdk version:"
 cdk --version
 
 # Run cdk for a specific stack
-if [[ "${INPUT_CDK_STACK_DIRECTORY}" != '' && "${INPUT_CDK_STACK}" != '' ]]; then
-  cd "${GITHUB_WORKSPACE}"
-  npm install
-  npm run build
-  npm run test
-  cdk ${INPUT_CDK_ACTION} ${INPUT_CDK_STACK}
-  exit 0;
-fi
+#if [[ "${INPUT_CDK_STACK}" != '' ]]; then
+  #cd "${GITHUB_WORKSPACE}"
+
+  #cdk ${INPUT_CDK_ACTION} ${INPUT_CDK_STACK}
+  #exit 0;
+#fi
+ls
+cd "${GITHUB_WORKSPACE}"
+ls
+npm install
+npm run build
+npm run test
+cdk ${INPUT_CDK_ACTION}
