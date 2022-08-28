@@ -14,7 +14,6 @@ env:
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   AWS_DEFAULT_REGION: 'us-east-1'
 ```
-Check image versions available here: https://hub.docker.com/r/kikemnzz/automate-cdk-github-action-kmzz/tags?page=1&ordering=name
 ## Action Inputs:
 
 | Action      | Description | Default     |

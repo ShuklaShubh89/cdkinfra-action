@@ -1,7 +1,7 @@
 FROM node:latest
 
-LABEL "com.github.actions.name"="Frontend Github Actions"
-LABEL "com.github.actions.description"="Sync directory to an AWS S3 repository and invalidate cloudfront cache"
+LABEL "com.github.actions.name"="CDK app Github Actions"
+LABEL "com.github.actions.description"="Build test and deploy the cdk infrastructure"
 LABEL "com.github.actions.icon"="refresh-cw"
 LABEL "com.github.actions.color"="green"
 
