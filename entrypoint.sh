@@ -35,11 +35,9 @@ aws configure set default.region "${AWS_DEFAULT_REGION}"
 echo "cdk version:"
 cdk --version
 
-# Run node build/test for the source code
-if [[ "${NODE_RUN_COMMAND}" != '' ]]; then
-  npm run "${NODE_RUN_COMMAND}"
-  exit 0;
-fi
+npm run build
+
+npm run test
 
 # Run cdk for a specific stack
 if [[ "${INPUT_CDK_STACK_DIRECTORY}" != '' && "${INPUT_CDK_STACK}" != '' ]]; then
